@@ -1,22 +1,32 @@
-import React from 'react';
-import Title from './Title';
+import React from "react";
+import Title from "./Title";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <div className="header">
-            <Title />
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>
-                        <i className="fa-solid fa-cart-shopping"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+    <div className="header">
+      <Title />
+      <div className="nav-items">
+        <ul>
+          <Link to="/">
+            {" "}
+            <li className="nav-items-menu">Home</li>
+          </Link>
+          <Link to="/about">
+            {" "}
+            <li className="nav-items-menu">About</li>
+          </Link>
+          <Link to="/contact">
+            {" "}
+            <li className="nav-items-menu">Contact</li>{" "}
+          </Link>
+          <li>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

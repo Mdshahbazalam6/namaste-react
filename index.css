@@ -458,6 +458,8 @@ a {
   margin-bottom: 10px;
   border-color: #d3d5df;
   box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+  width: 200px;
+  height: 200px;
 }
 
 .shimmer-title {
@@ -1299,7 +1301,7 @@ a {
     width: 70px;
   }
 
-  .nav-items > ul > li {
+  .nav-items-menu {
     font-size: small;
     padding: 6px;
   }
