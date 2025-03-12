@@ -8,6 +8,8 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import Contact from "./Components/Contact";
 import RestarauntMenu from "./Components/RestarauntMenu";
+// import Profile from "./Components/Profile";
+import Profile from "./Components/ProfileClass";
 
 /* My Food App structure will look like this, 
             1) Header
@@ -50,7 +52,14 @@ const appRouter = createBrowserRouter([
             {
                 path: "/about",
                 element: <About />,
-                errorElement: <Error />
+                errorElement: <Error />,
+                children: [
+                    {
+                        path: "profile",
+                        element: <Profile />,
+                        errorElement: <Error />
+                    }
+                ]
         
             },
             {
