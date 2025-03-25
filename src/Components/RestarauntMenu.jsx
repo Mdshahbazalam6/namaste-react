@@ -3,19 +3,20 @@ import { useParams } from 'react-router-dom'
 import { restaurantList } from '../constant';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
+import useRestaraunt from '../utils/useRestaraunt';
 
 const RestarauntMenu = () => {
     const {id} = useParams();
-    const [restaurant, setRestaurant] = useState({});
+    // const [restaurant, setRestaurant] = useState({});
 
-    useEffect(() => {
-        console.log('dhbwvnlsfvfsv')
-        const data = restaurantList.find((ele) => ele.info.resId.toString() === id)
+    // useEffect(() => {
+    //     console.log('dhbwvnlsfvfsv')
+    //     const data = restaurantList.find((ele) => ele.info.resId.toString() === id)
 
-        console.log(data);
-        setRestaurant(data);
-    },[])
-
+    //     console.log(data);
+    //     setRestaurant(data);
+    // },[])
+    const {restaurant} = useRestaraunt(id);
     useEffect(() => {
         console.log('dhbwvnlsfvfs')
     }, [])

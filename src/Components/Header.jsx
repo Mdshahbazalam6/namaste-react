@@ -20,6 +20,10 @@ const Header = () => {
             {" "}
             <li className="nav-items-menu">Contact</li>{" "}
           </Link>
+          <Link to="/instamart">
+            {" "}
+            <li className="nav-items-menu">Instamart</li>{" "}
+          </Link>
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
           </li>

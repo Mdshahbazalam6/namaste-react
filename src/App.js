@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -10,6 +10,10 @@ import Contact from "./Components/Contact";
 import RestarauntMenu from "./Components/RestarauntMenu";
 // import Profile from "./Components/Profile";
 import Profile from "./Components/ProfileClass";
+import Shimmer from "./Components/Shimmer";
+// import Instamart from "./Components/Instamart";
+
+const Instamart = lazy(() => import("./Components/Instamart"));
 
 /* My Food App structure will look like this, 
             1) Header
@@ -79,6 +83,11 @@ const appRouter = createBrowserRouter([
             },
         ]
     },
+    {
+        path:"/instamart",
+        element: <Suspense fallback={<Shimmer />}><Instamart/></Suspense>,
+        errorElement: <Error />
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={appRouter} />);
